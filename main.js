@@ -6,8 +6,8 @@
     function fun( $scope , $http )
     {
         $scope.print = () =>                
-            $http.post( './index.php', { html : document.querySelector('.wrapper').innerHTML } , { responseType : 'blob' } )
-                .then( r => generateLink( r.data , 'downloaded' ) )
+            $http.post( './index.php', { html : '<h1>asd</h1>' } )
+                .then( e => console.log(e) )
     }
     
     function generateLink( data , id , name = "PDF.pdf" )
